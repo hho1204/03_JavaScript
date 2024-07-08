@@ -69,3 +69,21 @@ function check7() {
     console.log(num);
   }
 }
+
+function check8() {
+
+  for(let num = 150; num <= 300; num+=5){
+    console.log(num);
+  }
+}
+
+// 3부터 27까지 2씩 증가한 숫자들의 합을 출력하기
+function check9(){
+
+  let sum = 0;
+  for(let num=3; num <= 27; num+=2){
+     sum += num;
+  }
+
+  console.log(sum);
+}
