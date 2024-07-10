@@ -1,0 +1,68 @@
+.container{
+  width: 700px;
+  height: 300px;
+
+}
+.test1{
+  width: 300px;
+  height: 40px;
+
+  margin-top: 10px;
+
+}
+.test2{
+  width: 300px;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+
+}
+.test3{
+  position: fixed;
+  left: 10px;
+  
+}
+
+.test4{
+  width: 300px;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+}
+
+.test5{
+  position: fixed;
+  left: 10px;
+}
+
+.test6{
+  width: 300px;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+}
+.test7{
+ position: fixed;
+  
+  left: 10px;
+}
+
+.test9{
+
+  position: fixed;
+  left: 7px;
+  width: 700px;
+
+}
+
+.test10 {
+    text-align: center;
+    cursor: pointer;
+    
+}
+.square{
+
+  border: 3px solid black;
+  margin-top: 60px;
+  align-items: center;
+}
