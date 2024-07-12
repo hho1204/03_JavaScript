@@ -1,0 +1,25 @@
+
+
+.container{
+  width: 450px;
+  height: 300px;
+  border: 1px solid black;
+  flex-flow: wrap;
+  display: flex;
+  margin: auto;
+
+}
+
+
+.number{
+  width: 150px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px 0;
+  cursor: pointer;
+}

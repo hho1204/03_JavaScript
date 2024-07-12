@@ -1,24 +1,65 @@
+const applyBtn = document.querySelector("#applyBtn"); // 적용하기 버튼
 
+applyBtn.addEventListener("click", () => {
+  // 화면에 존재하는 입력 요소들 모두 얻어오기
+  const boxWidth = document.querySelector("#boxWidth");
+  const boxHeight = document.querySelector("#boxHeight");
+  const fs = document.querySelector("#fs");
+  const boxFontColor = document.querySelector("#boxFontColor");
+  const boxBgColor = document.querySelector("#boxBgColor");
+  const content = document.querySelector("#content");
 
-function applybtn(){
-const width = Number(document.querySelector("#input1").value);
-const height = Number(document.querySelector("#input2").value);
-const fontsize = document.querySelector("#input3").value;
-const fontjustbold = document.querySelector("#input4").value;
-const fontbold = document.querySelector("#input5").value;
-const uitextcolor = document.querySelector("#input6").value;
-const background = document.querySelector("#input7").value
-const horizontal = document.querySelector("#input8").value;
-const vertical = document.querySelector("#input9").value;
-const applytext = document.querySelector("#input10");
+  // 체크된 radio 요소만 얻어오기
+  // -> :checked 이용 시 체크된 요소가 없다면 null
+  const fw = document.querySelector("[name=fw]:checked");
+  const alignRow = document.querySelector("[name=align-row]:checked");
+  const alignCol = document.querySelector("[name=align-col]:checked");
 
-const square = document.querySelector(".square");
+  const box = document.querySelector("#box");
 
-square.style.width = `${width}px`;
-square.style.height = `${height}px`;
-square.style.fontSize = `${fontsize}`;
-square.style.color = "textcolor";
-square.style.backgroundColor = "background";
+  /* 입력된 값이 있을 때만 css 적용 */
 
-
+  // 너비를 입력한 경우
+if(boxWidth.value.trim().length > 0){
+    box.style.width = boxWidth.value + 'px';
+ }
+ if(boxHeight.value.trim().length > 0){
+  box.style.height = boxHeight.value + 'px';
 }
+
+// 글자크기를 입력한 경우
+if(fs.value.trim().length > 0){
+  box.style.fontSize = fs.value + 'px';
+}
+
+// 글자색을 입력한 경우
+if(boxFontColor.value.trim().length > 0){
+  box.style.color = boxFontColor.value;
+}
+
+if(boxBgColor.value.trim().length > 0){
+  box.style.backgroundColor = boxBgColor.value;
+}
+
+if(content.value.trim().length > 0){
+  box.innerText = content.value;
+}
+
+// 굵기가 체크된 경우
+if(fw !== null){
+  box.style.fontweight = fw.value;
+}
+
+// 가로 정렬이 체크된 경우
+if(alignRow !== null){
+  box.style.justifyContent = alignRow.value;
+}
+
+// 세로 정렬이 체크된 경우
+if(alignCol !== null){
+  box.style.alignItems = alignCol.value;
+}
+
+
+});
+

@@ -8,50 +8,70 @@
 </head>
 <body>
   <h1>UI구현_임호현</h1>
-  <div class = "container" >
-    <div class="uiwidth">
-      너비 : <input type="number" id="input1" value="width"> px
-   </div>
-      <div class="uiheight">
-      높이 : <input type="number" id="input2" > px
+<hr>
+
+<div class="container">
+  <table>
     
-      <div class="uifontsize">
-      글자크기 : <input type="number" id="input3"> px
-     
-      <div class="uifontbold">
-      굵기 : 보통<input type="radio" id ="input4" value="nborder">
-             굵게<input type="radio" id ="input5" value="border">
-             </div>  
-      <div class= "uitextcolor">
-      글자색 : <input type="text" id="input6" value="red">
-    
-      <div class= "uibackground">
-      배경색 : <input type="text" id="input7" value="green">
-      <div class="uihorizon">
-      가로정렬 : 왼쪽<input type="radio" id ="input8" value="left">
-                 가운데<input type="radio" id ="input9" value="center">
-                 오른쪽<input type="radio" id ="input10" value="right">
-      
-      </div>
-      <div class="uivertic">
-        세로정렬 : 위<input type="radio" id ="input11" value="up">
-                   가운데<input type="radio" id ="input12" value="center">
-                   아래<input type="radio" id ="input13" value="down">
-        </div>
-        <div class="uitext">
-        출력 문자열: <input type="text" id="outtext" size=50> 
-          </div>
-     </div>
-      </div>
-      </div>
-      </div>
+      <th>너비 : </th>
+      <td> <input type="number" id="boxWidth" class="input-width"> px </td>
 
     
-  </div>
-  <div class="test10">
-    <button onclick="applybtn()">적용하기</button>
-  </div>
-  <div class = "square"></div>
+      <th>높이 :</th>
+      <td> <input type="number" id="boxHeight" class="input-width"> px </td>
+
+      <tr>
+        <th>글자크기 : </th>
+        <td><input type="number" id ="fs" class="input-width"> px </td>
+
+        <th> 굵기 :</th>
+        <td>
+          보통 : <input type="radio" name="fw" value="normal">
+          굵게 : <input type="radio" name="fw" value="bold">
+        </td>
+
+
+
+      </tr>
+      <tr>
+        <th>글자색 : </th>
+        <td> <input type="text" id="boxFontColor"> </td>
+
+        <th>배경색 :</th>
+        <td> <input type="text" id="boxBgColor"> </td>
+      </tr>
+
+      <tr>
+        <th>가로정렬 :</th>
+        <td colspan="3">
+          왼쪽 <input type="radio" name="align-row" value="flex-start">
+          가운데 <input type="radio" name="align-row" value="center">
+          오른쪽 <input type="radio" name="align-row" value="flex-end">
+        </td>
+      </tr>
+
+      <tr>
+        <th>세로정렬 :</th>
+        <td colspan="3">
+          위 <input type="radio" name="align-col" value="flex-start">
+          가운데 <input type="radio" name="align-col" value="center">
+          아래 <input type="radio" name="align-col" value="flex-end">
+        </td>
+      </tr>
+
+      <tr>
+        <th>출력 문자열:</th>
+        <td colspan="3">
+         <input type="text" id="content">
+        </td>
+      </tr>
+    
+
+  </table>
+
+  <button id ="applyBtn">적용하기</button>
+  <div id="box"></div>
+</div>
  
 
   <script src="UI구현.js"></script>
